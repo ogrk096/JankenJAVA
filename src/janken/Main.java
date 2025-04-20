@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+	//初期画面メソッド
 	static void cli() {
 		
 		System.out.println("--------------------");
@@ -14,6 +15,7 @@ public class Main {
 		
 		int i;
 		
+		//数値入力の例外処理
 		try {
 			i = sc.nextInt();
 			if(0<=i && i<=2) {
@@ -26,6 +28,7 @@ public class Main {
 		}
 	}
 	
+	//勝ち負け判定メソッド
 	static void cal(int i) {
 		Random rand = new Random();
 		
@@ -85,16 +88,19 @@ public class Main {
 			break;
 		}
 	}
+	
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("ようこそじゃんけん勝負へ");
 		
 		boolean i=true;
 		
+		//いいえを選ぶまでじゃんけんが続く
 		while(i) {
 			cli();
 			
 			boolean flag = true;
+			//正しい値が入力されるまでの処理
 			while(flag) {
 				System.out.println("もう一度戦う?");
 				System.out.println("--------------------");
@@ -103,6 +109,7 @@ public class Main {
 				Scanner sc = new Scanner(System.in);				
 				int j;
 				
+				//数値入力の例外処理
 				try {
 					j = sc.nextInt();
 					if(j == 1) {
